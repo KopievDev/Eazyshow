@@ -68,3 +68,35 @@ extension ViewController: SessionDelegate {
  session.close()
 ```
 
+### Example 
+```swift
+import UIKit
+import Eazyshow
+
+class ViewController: UIViewController {
+    //MARK: - Required Properties -
+    lazy var user = User(parameters: ["firstName":"John", "lastName":"Dorian", "id":"2323"])
+    lazy var agent = Assignment(account: "95453f64-b803-4495-abd9-9c785590f2fe",
+                                token: "7157fb3c-268b-4cf9-9988-beb4d2370cda")
+    lazy var session = Session(user: user, agent: agent, url: URL(string: "https://stage.verishow.com/client/conference/sdk/ios")!)
+    
+    //MARK: - Lifecycle -
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        session.show(from: self)
+    }
+}
+
+//MARK: - SessionDelegate -
+extension ViewController: SessionDelegate {
+    func session(_ session: Session, didReceive data: [String : Any]?) {
+        let resp = data?["name"] as? String ?? "other data format"
+        print(resp)
+        if resp == "vsSessionClosed" {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                session.close()
+            }
+        }
+    }
+}
+```
