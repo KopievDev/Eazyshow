@@ -20,7 +20,7 @@
 ### 3) Create an instance of the `Session` class using User, Assignment instances and a connection reference
 
 ```swift
- lazy var session = Session(user: user, agent: agent, url: URL(string: "https://stage.verishow.com/client/conference/sdk/ios")!)
+ lazy var session = Session(user: user, assignment: assignment, url: URL(string: "https://stage.verishow.com/client/conference/sdk/ios")!)
 ```
 
 ### 4) To call a session, use the following method `func show(from vc: UIViewController)`
