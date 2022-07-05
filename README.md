@@ -1,5 +1,12 @@
 # Eazyshow
 
+### Installation
+Add package from https://github.com/KopievDev/Eazyshow
+| First step | Second step |
+| ------ | ------ |
+|![Снимок экрана 2022-07-05 в 15 53 08](https://user-images.githubusercontent.com/78022759/177332120-de504661-d744-4e59-b3a4-a1ab9dac2ed4.png)|![Снимок экрана 2022-07-05 в 15 53 44](https://user-images.githubusercontent.com/78022759/177332515-5ca0828c-fbba-4026-a332-1ed00209a390.png)|
+
+
 ### 1) Get a token and ID from your account and create an instance of the `Assignment` class
 
 | Token | Account ID |
