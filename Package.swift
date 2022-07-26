@@ -21,6 +21,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        .binaryTarget(name: "Eazyshow", url: "https://mustdev.ru/Eazyshow.xcframework.zip", checksum: "841a710956c3091751818385b9c0ffcf994559c0b0e20cc90cb13ff642240e94")
+        .binaryTarget(name: "Eazyshow", url: "https://mustdev.ru/Eazyshow.xcframework.zip", checksum: "a455913cdc9f627c6a8caf8cd3cdc06281a6f2109c9cdcead14d3eee545dbee8")
     ]
 )
